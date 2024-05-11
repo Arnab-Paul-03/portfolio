@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            height: 200px; /* Adjust height as needed */
+            margin-bottom: 20px; /* Add some space between cards */
+            padding: 20px;
+            border-radius: 8px; /* Optional: Add some border radius for a nicer look */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add a shadow for depth */
+            overflow: hidden; /* Hide overflow content */
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the opacity */
+            border-radius: 8px; /* Optional: Add some border radius for a nicer look */
+            z-index: 1; /* Ensure overlay is above content */
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2; /* Ensure content is above overlay */
+            color: white; /* Optional: Set text color to white for better contrast */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="card-container">
+        <div class="card card1" style="background-image: url('./code.png');">
+            <div class="card-content">
+                <h3>Programming Languages</h3>
+                <p>HTML, CSS, Javascript, Bootstrap, Reactjs, Nodejs</p>
+            </div>
+        </div>
+        <div class="card card2" style="background-image: url('./code.png');">
+            <div class="card-content">
+                <h3>Development Tools</h3>
+                <p>Figma, Photoshop, Git</p>
+            </div>
+        </div>
+        <div class="card card3" style="background-image: url('./code.png');">
+            <div class="card-content">
+                <h3>Design</h3>
+                <p>C, C++, Java, Python</p>
+            </div>
+        </div>
+        <div class="card card4" style="background-image: url('./code.png');">
+            <div class="card-content">
+                <h3>Platforms</h3>
+                <p>Android, Web</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
